@@ -1,0 +1,33 @@
+.container {
+	max-width: 1100px;
+	padding: 0 30px;
+	margin: 0 auto;
+	overflow: auto;
+}
+
+
+// Spacing Classes
+@each $space in $space-amounts {
+	.m-#{$space} {
+		margin: #{$space}rem;
+	}
+	.my-#{$space} {
+		margin-top: #{$space}rem;
+		margin-bottom: #{$space}rem;
+	}
+	.mx-#{$space} {
+		margin-left: #{$space}rem;
+		margin-right: #{$space}rem;
+	}
+	.p-#{$space} {
+		padding: #{$space}rem;
+	}
+	.py-#{$space} {
+		padding-top: #{$space}rem;
+		padding-bottom: #{$space}rem;
+	}
+	.px-#{$space} {
+		padding-left: #{$space}rem;
+		padding-right: #{$space}rem;
+	}
+}

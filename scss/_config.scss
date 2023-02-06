@@ -1,0 +1,26 @@
+// Fonts
+$font-stack: Axiforma, sans-serif;
+
+// Colors
+$light-color: #f4f4f4;
+$primary-color: #0e6cff;
+$secondary-color: #ff8700;
+
+// Spacing
+$space-amounts: (1,2,3,4,5);
+
+
+// Set Text Color Based on BG Color
+@function set-text-color($color) {
+	@if(lightness($color) > 70) {
+		@return #333;
+	} @else {
+		@return #fff;
+	}
+}
+
+// Set Background & Text Color
+@mixin set-background($color) {
+	background-color: $color !important;
+	color: set-text-color($color) !important;
+}
